@@ -1,0 +1,313 @@
+#form2 {
+	position: relative;
+	max-width: 300px;
+	margin-bottom: 20px;
+}
+
+#sbox2 {
+	height: 50px;
+	padding: 0 10px;
+	position: absolute;
+	left: 400;
+	top: 20;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+
+#sbtn2 {
+	height: 50px;
+	position: absolute;
+	left: 255px;
+	/*アイコン左右の位置調整*/
+	top: 0;
+	background: none;
+	color: #666;
+	border: none;
+	font-size: 20px;
+	/*アイコンサイズ*/
+}
+
+#sbtn5:hover {
+	color: #7fbfff;
+}
+
+#form3 {
+	position: relative;
+	max-width: 300px;
+	margin-bottom: 20px;
+}
+
+#sbox3 {
+	height: 50px;
+	padding: 0 10px;
+	position: absolute;
+	left: 620;
+	top: 0;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+
+#sbtn3 {
+	height: 50px;
+	position: absolute;
+	left: 255px;
+	/*アイコン左右の位置調整*/
+	top: 0;
+	background: none;
+	color: #666;
+	border: none;
+	font-size: 20px;
+	/*アイコンサイズ*/
+}
+
+#sbtn5:hover {
+	color: #7fbfff;
+}
+
+
+#form4 {
+	position: relative;
+	max-width: 300px;
+	margin-bottom: 20px;
+}
+
+#sbox4 {
+	height: 50px;
+	padding: 0 10px;
+	position: absolute;
+	left: 840;
+	top: 0;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+
+#sbtn4 {
+	height: 50px;
+	position: absolute;
+	left: 255px;
+	/*アイコン左右の位置調整*/
+	top: 0;
+	background: none;
+	color: #666;
+	border: none;
+	font-size: 20px;
+	/*アイコンサイズ*/
+}
+
+#sbtn5:hover {
+	color: #7fbfff;
+}
+
+
+
+#form2 {
+	position: relative;
+	max-width: 300px;
+	margin-bottom: 20px;
+}
+
+#sbox2 {
+	height: 50px;
+	padding: 0 10px;
+	position: absolute;
+	left: 400;
+	top: 20;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+
+#sbtn2 {
+	height: 50px;
+	position: absolute;
+	left: 255px;
+	/*アイコン左右の位置調整*/
+	top: 0;
+	background: none;
+	color: #666;
+	border: none;
+	font-size: 20px;
+	/*アイコンサイズ*/
+}
+
+#sbtn5:hover {
+	color: #7fbfff;
+}
+
+#form3 {
+	position: relative;
+	max-width: 300px;
+	margin-bottom: 20px;
+}
+
+#sbox3 {
+	height: 50px;
+	padding: 0 10px;
+	position: absolute;
+	left: 620;
+	top: 0;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+
+#sbtn3 {
+	height: 50px;
+	position: absolute;
+	left: 255px;
+	/*アイコン左右の位置調整*/
+	top: 0;
+	background: none;
+	color: #666;
+	border: none;
+	font-size: 20px;
+	/*アイコンサイズ*/
+}
+
+#sbtn5:hover {
+	color: #7fbfff;
+}
+
+
+#form4 {
+	position: relative;
+	max-width: 300px;
+	margin-bottom: 20px;
+}
+
+#sbox4 {
+	height: 50px;
+	padding: 0 10px;
+	position: absolute;
+	left: 840;
+	top: 0;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+
+#sbtn4 {
+	height: 50px;
+	position: absolute;
+	left: 255px;
+	/*アイコン左右の位置調整*/
+	top: 0;
+	background: none;
+	color: #666;
+	border: none;
+	font-size: 20px;
+	/*アイコンサイズ*/
+}
+
+#sbtn5:hover {
+	color: #7fbfff;
+}
+
+
+
+
+#form5 {
+	position: relative;
+	max-width: 300px;
+	margin-bottom: 20px;
+}
+
+#sbox5 {
+	height: 50px;
+	padding: 0 10px;
+	position: absolute;
+	left: 400;
+	top: 70;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+
+#sbtn5 {
+	height: 50px;
+	position: absolute;
+	left: 255px;
+	/*アイコン左右の位置調整*/
+	top: 0;
+	background: none;
+	color: #666;
+	border: none;
+	font-size: 20px;
+	/*アイコンサイズ*/
+}
+
+#sbtn5:hover {
+	color: #7fbfff;
+}
+
+#form6 {
+	position: relative;
+	max-width: 300px;
+	margin-bottom: 20px;
+}
+
+#sbox6 {
+	height: 50px;
+	padding: 0 10px;
+	position: absolute;
+	left: 620;
+	top: 70;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+
+#sbtn6 {
+	height: 50px;
+	position: absolute;
+	left: 255px;
+	/*アイコン左右の位置調整*/
+	top: 0;
+	background: none;
+	color: #666;
+	border: none;
+	font-size: 20px;
+	/*アイコンサイズ*/
+}
+
+#sbtn5:hover {
+	color: #7fbfff;
+}
+
+
+#form7 {
+	position: relative;
+	max-width: 300px;
+	margin-bottom: 20px;
+}
+
+#sbox7 {
+	height: 50px;
+	padding: 0 10px;
+	position: absolute;
+	left: 840;
+	top: 70;
+	border-radius: 2px;
+	outline: 0;
+	background: #eee;
+}
+
+#sbtn7 {
+	height: 50px;
+	position: absolute;
+	left: 255px;
+	/*アイコン左右の位置調整*/
+	top: 0;
+	background: none;
+	color: #666;
+	border: none;
+	font-size: 20px;
+	/*アイコンサイズ*/
+}
+
+#sbtn5:hover {
+	color: #7fbfff;
+}

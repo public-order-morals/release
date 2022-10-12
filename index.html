@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>test</title>
+  </head>
+
+  <h1>
+    資産管理アプリケーション - LOGIN
+  </h1>
+  <br>
+  ユーザー管理機能、ログイン機能はSQL動作環境でないと使えません。<br>
+  デモとして使うにはローカルサーバ上での実行、またはファイルをそのまま開いてください。<br>
+  ファイル環境下ではloginbypassボタンを押してログインしてください。<br>
+  ファイル環境下だとadmin用の画面に行きますが、データベース上のデータは編集できません。
+  
+  <!--<form action="//www-creators.com/rsc/receiver.php" method="post">
+  <label>ユーザー名</label><br>
+  <input type="email" name="user-id" value="" placeholder="ユーザー名を入力"><br>
+  <label>メールアドレス</label><br>
+  <input type="email" name="email-address" value="" placeholder="メールアドレスを入力"><br>
+  <label>パスワード</label><br>
+  <input type="password" name="passward" value="" maxlength="8" placeholder="パスワードを入力">
+  </form>-->
+
+  <form action="start.php" method="POST">
+    <div>
+        <label>メールアドレス</label>
+        <input name="email" value="">
+    </div>
+    <div>
+        <label>パスワード</label>
+        <input name="password" value="">
+    </div>
+    <div>
+        <button>LOGIN</button>
+    </div>
+</form>
+
+<form>
+  <button type="submit">ログインできない場合はこちら</button>
+</form>
+
+<div2>
+<button type=“button” onclick="location.href='home_admin.html'">login bypass</button>
+</div2>
+
+
+<br><br><br>
+<h2>links</h2>
+<p><a href="https://github.com/public-order-morals/product-frame/">Github repository</a>.</p>
+<p><a href="https://discord.com/">Discord login</a>.</p>
+
+
+</html>

@@ -1,3 +1,5 @@
+//使ってない。ファイルを直接開く場合
+
 let fileInput = document.getElementById('csv_file');
 let message = document.getElementById('message');
 let fileReader = new FileReader();

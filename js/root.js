@@ -1,3 +1,5 @@
+//検索機能
+
 message.innerHTML = "データを取得してください";
 var data = [
     {

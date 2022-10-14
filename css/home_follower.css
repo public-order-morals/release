@@ -29,3 +29,8 @@ hr {
   display: flex;
   justify-content: space-around;
 }
+
+body {
+  background-image: url("");
+  background-size: cover;
+}

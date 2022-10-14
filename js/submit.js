@@ -3,28 +3,20 @@
 var str1,str2,str3,str4,str5,str6,str7,str8;
 function submit_input() {
     str1 = document.getElementById("submit_kind").value;
-
     console.log(str1);
     str2 = document.getElementById("submit_place").value;
-
     console.log(str2);
     str3 = document.getElementById("submit_user").value;
-
     console.log(str3);
     str4 = document.getElementById("submit_admin").value;
-
     console.log(str4);
     str5 = document.getElementById("submit_name").value;
-
     console.log(str5);
     str6 = document.getElementById("submit_format").value;
-
     console.log(str6);
     str7 = document.getElementById("submit_number").value;
-
     console.log(str7);
     str8 = document.getElementById("submit_images").value;
-
     console.log(str8);
 
     message_out.innerHTML = "下記の内容で登録しますか？" + "<br>" + "学科 : "+ str1

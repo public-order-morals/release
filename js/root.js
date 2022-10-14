@@ -143,6 +143,7 @@ var data = [
         "編集日時": "2022/07/13"
     }]
 /*[
+
     {
         "id": "1",
         "資産番号": "00000-99999999-00000",
@@ -1544,6 +1545,9 @@ var data = [
         "編集日時": "2022/07/13"
     }
 ]*/
+
+
+//更新
 function refresh() {
 
     console.log(data);
@@ -1577,7 +1581,7 @@ function refresh() {
 function Utt() {
     console.log(data);
 };
-
+//検索
 function location_search() {
     const str = document.getElementById("location1").value;
 

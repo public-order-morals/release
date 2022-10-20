@@ -5,6 +5,8 @@
 
     <link rel="stylesheet" href="css/home_follower.css">
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/login_function.js"></script>
+
 
     <meta charset="utf-8">
     <title>ユーザ情報編集</title>
@@ -22,7 +24,7 @@
   <a class="home_link" href="home_follower.html">ホーム</a>
   <hr class="hr1">
     <section class="section">
-
+<!--
     現在ログイン中のユーザ
     <div class="item__header clearfix">
       <span class="item__user-icon">
@@ -37,6 +39,18 @@
     </div>
 
 <br>
+  -->
+
+<p id="msg">現在ログイン中のユーザ</p>
+  <script>
+    document.cookie = 'permission=admin';
+    document.cookie = 'number=1';
+    let name = encodeURIComponent('tagu');
+    document.cookie = 'name=' + name;
+    
+    let e = document.getElementById('msg');
+    e.insertAdjacentHTML('afterend', '<p>' + document.cookie + '</p>');
+    </script>
 
     <div1>
       <button type=“button” onclick="location.href='index.html'">ログイン画面へ戻る</button>

@@ -1,4 +1,4 @@
-//検索機能
+//データの管理（すべてのHTMLでincludeして）
 
 message.innerHTML = "データを取得してください";
 var data = [

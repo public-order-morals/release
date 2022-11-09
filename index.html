@@ -2,21 +2,16 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
-
-  <link rel="stylesheet" href="css/home_follower.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/home_follower.css">
   
+    <script type="text/javascript" src="js/login_function.js"></script>
     <title>login</title>
   </head>
 
   <h1>
-    資産管理アプリケーション - LOGIN
+    Login
   </h1>
-  <br>
-  ユーザー管理機能、ログイン機能はSQL動作環境でないと使えません。<br>
-  デモとして使うにはローカルサーバ上での実行、またはファイルをそのまま開いてください。<br>
-  ファイル環境下ではloginbypassボタンを押してログインしてください。<br>
-  ファイル環境下だとadmin用の画面に行きますが、データベース上のデータは編集できません。
-
 
   <hr class="hr1">
   
@@ -28,34 +23,41 @@
   <label>パスワード</label><br>
   <input type="password" name="passward" value="" maxlength="8" placeholder="パスワードを入力">
   </form>-->
-
+<!---
   <form action="start.php" method="POST">
     <div>
-        <label>メールアドレス</label>
+        <label>Address </label>
         <input name="email" value="">
     </div>
     <div>
-        <label>パスワード</label>
+        <label>Passward </label>
         <input name="password" value="">
     </div>
-    <div>
-        <button>LOGIN</button>
-    </div>
+  
 </form>
+-->
 
-<form>
-  <button type="submit">ログインできない場合はこちら</button>
-</form>
+<div>
+<input id="submit_id" id="s" name="s" type="text" placeholder="mail" />
+</div>
 
-<div2>
-<button type=“button” onclick="location.href='home_follower.html'">login bypass</button>
-</div2>
+<div>
+<input id="submit_pass" id="s" name="s" type="text" placeholder="pass" />
+</div>
+
+<div>
+  <input id="login_button" type="button" value="Login" onclick="login_data()" />
+</div>
+
+
 
 
 <br><br><br>
 <h2>links</h2>
 <p><a href="https://github.com/public-order-morals/product-frame/">Github</a>.</p>
 <p><a href="https://discord.com/">Discord</a>.</p>
-
+<div2>
+  <button type=“button” onclick="location.href='home_follower.html'">login bypass</button>
+</div2>
 
 </html>

@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
 
-  <link rel="stylesheet" href="css/home_follower.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
 
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/root.js"></script>
@@ -15,22 +16,30 @@
 <body>
 
   <!-- タイトル -->
-  <h1>
-    POaM資産管理システム（仮称）
-    <span>
+  <br>
+  <p class=title>
+    <span class=left>
+      POaM資産管理システム（仮称）
+    </span>
+    <span class=right>
       ver : alpha
     </span>
-  </h1>
+  </p>
+  <br>
 
   <!-- 罫線 -->
   <hr class="hr1">
 
-  <!-- ボタンリスト button-listによる実装 -->
+  <!-- ボタンリスト -->
   <div class="button-list">
-    <button onclick="location.href='./submit_follower.html'"><img src="images/submit.jpg" width="250" height="250"></button>
-    <button onclick="location.href='./change_follower.html'"><img src="images/change.jpg" width="250" height="250"></button>
-    <button onclick="location.href='./list.html'"><img src="images/search.jpg" width="250" height="250"></button>
-    <button onclick="location.href='./user_info_follower.html'"><img src="images/user.jpg" width="250" height="250"></button>
+    <a href="submit_follower.html">
+      <img src="images/home/submit.jpg" class="img-button" width="250" height="250"></a>
+    <a href="change_follower.html">
+      <img src="images/home/change.jpg" class="img-button" width="250" height="250"></a>
+    <a href="list.html">
+      <img src="images/home/search.jpg" class="img-button" width="250" height="250"></a>
+    <a href="user_info_follower.html">
+      <img src="images/home/user.jpg" class="img-button" width="250" height="250"></a>
   </div>
 
 </body>

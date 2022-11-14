@@ -18,7 +18,7 @@
   <body>
 
   <!-- タイトル -->
-  <h1 class="title">資産検索</h1>
+  <h1 class="title">ユーザー情報編集</h1>
   <!-- 罫線 -->
   
   <a class="home_link" href="home_follower.html">ホーム</a>
@@ -45,8 +45,10 @@
   <script>
     document.cookie = 'permission=admin';
     document.cookie = 'number=1';
-    let name = encodeURIComponent('tagu');
-    document.cookie = 'name=' + name;
+    let main = encodeURIComponent('s18562@salesio-sp.ac.jp');
+    let username = encodeURIComponent('taguwa');
+    document.cookie = 'mail=' + main;
+    document.cookie = 'name' + username;
     
     let e = document.getElementById('msg');
     e.insertAdjacentHTML('afterend', '<p>' + document.cookie + '</p>');

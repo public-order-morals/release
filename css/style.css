@@ -1,3 +1,38 @@
+html,
+
+body {
+	overflow: hidden;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	line-height: 0.7;
+	font-family: "游ゴシック", "ヒラギノ角ゴ ProN W3", "sans-serif";
+}
+
+.left,
+.right {
+	display: inline-block;
+}
+
+.left {
+	font-size: 300%
+}
+
+hr {
+	padding: 20px 0;
+	border: none;
+}
+
+.hr1 {
+	border-top: 5px solid rgb(252, 153, 60);
+}
+
+/***以下、元あったstyle.css***/
+
+/*
 form {
 	text-align: center;
 }
@@ -81,4 +116,4 @@ input {
 .item__date {
 	display: block;
 	margin-left: 60px;
-}
+}*/

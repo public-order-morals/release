@@ -15,10 +15,10 @@
 </style>
   </head>
 
-  <p class = "title1"><font size="10" color="#FFAE5E" >LO</font></p>
-
+  <p class = "title1"><font size="10" color="#FFAE5E" >- LOGIN -</font></p>
+<!--
   <p class = "title2"><font size="10" color="#FFAE5E" >IN</font></p>
-
+-->
   
   <!--<form action="//www-creators.com/rsc/receiver.php" method="post">
   <label>ユーザー名</label><br>
@@ -54,6 +54,7 @@
   <input id="login_button" type="button" value="Login" onclick="login_data()" />
 </div>
 
+<!--
 <div class="cssload-dots">
 	<div class="cssload-dot"></div>
 	<div class="cssload-dot"></div>
@@ -67,18 +68,63 @@
 		<filter id="goo">
 			<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12" ></feGaussianBlur>
 			<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0	0 1 0 0 0	0 0 1 0 0	0 0 0 18 -7" result="goo" ></feColorMatrix>
-			<!--<feBlend in2="goo" in="SourceGraphic" result="mix" ></feBlend>-->
+			<feBlend in2="goo" in="SourceGraphic" result="mix" ></feBlend>
 		</filter>
 	</defs>
 </svg>
-
+-->
 
 <br><br><br>
 <h2>links</h2>
-<p><nobr><a href="https://github.com/public-order-morals/product-frame/">Github,</a></nobr></p>
+<p><nobr><a href="https://github.com/public-order-morals/">Github,</a></nobr></p>
 <p><nobr><a href="https://discord.com/">Discord</a></nobr></p>
 <div2>
   <button type=“button” onclick="location.href='home_follower.html'">login bypass</button>
 </div2>
+
+
+<br><br><br>
+
+<script type="text/javascript">
+ // requireの設定
+const mysql = require('mysql');
+
+// MySQLとのコネクションの作成
+const connection = mysql.createConnection({
+	host : 'localhost',
+	user : 'root',
+	database: 'data'
+});
+
+// 接続
+connection.connect();
+
+// userdataの取得
+connection.query('SELECT * from userdata;', function (err, rows, fields) {
+	if (err) { console.log('err: ' + err); } 
+
+	console.log('name: ' + rows[0].name);
+	console.log('id: ' + rows[0].id);
+
+});
+
+// userdataのカラムを取得
+connection.query('SHOW COLUMNS FROM userdata;', function (err, rows, fields) {
+	if (err) { console.log('err: ' + err); }
+
+	console.log(rows[0].Field);
+	console.log(rows[1].Field);
+});
+
+// 接続終了
+connection.end();
+</script>
+
+
+
+<p>レコードの検索 テストページ</p>
+  <a href="javascript:Proc();">データを一括取得</a><br />
+  <div id="output">
+</div>
 
 </html>

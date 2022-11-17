@@ -1,6 +1,46 @@
+//
 //データの管理（すべてのHTMLでincludeして）
+//
 
 message.innerHTML = "データを取得してください";
+
+//
+//SQL関連
+//
+
+ // requireの設定
+ const mysql = require('mysql');
+
+ // MySQLとのコネクションの作成
+ const connection = mysql.createConnection({
+     host : 'localhost',
+     user : 'root',
+     database: 'data'
+ });
+ 
+ // 接続
+ connection.connect();
+ 
+ // userdataの取得
+ connection.query('SELECT * from userdata;', function (err, rows, fields) {
+     if (err) { console.log('err: ' + err); } 
+ 
+     console.log('name: ' + rows[0].name);
+     console.log('id: ' + rows[0].id);
+ 
+ });
+ 
+ // userdataのカラムを取得
+ connection.query('SHOW COLUMNS FROM userdata;', function (err, rows, fields) {
+     if (err) { console.log('err: ' + err); }
+ 
+     console.log(rows[0].Field);
+     console.log(rows[1].Field);
+ });
+ 
+ // 接続終了
+ connection.end();
+ 
 var data = [
     {
         "id": "1",
@@ -142,6 +182,182 @@ var data = [
         "取得日時": "2022/07/12",
         "編集日時": "2022/07/13"
     }]
+
+
+//更新
+function refresh() {
+
+    console.log(data);
+    let tbody = document.querySelector('#csv_data_table tbody');
+    tbody.innerHTML = "";
+
+    //　CSVの内容を表示
+    let tbody_html = "";
+    for (item of data) {
+        tbody_html += `<tr>
+      <td>${item.id}</td>
+      <td>${item.資産番号}</td>
+      <td>${item.所属}</td>
+      <td>${item.資産名}</td>
+      <td>${item.場所}</td>
+      <td>${item.担当}</td>
+      <td>${item.管理者}</td>
+      <td>${item.形式}</td>
+      <td>${item.個数}</td>
+      <td>${item.識別番号}</td>
+      <td>${item.取得日時}</td>
+      <td>${item.編集日時}</td>
+    </tr>
+    `
+    }
+    tbody.innerHTML = tbody_html;
+    console.log(tbody_html);
+    message.innerHTML = data.length + "件のデータがあります。"
+};
+
+function Utt() {
+    console.log(data);
+};
+
+//絞り込み検索
+function location_search() {
+    const str = document.getElementById("location1").value;
+
+    let tbody = document.querySelector('#csv_data_table tbody');
+    tbody.innerHTML = "";
+
+    var data_03 = data.filter(function (data) {
+        return data.場所 == str;
+    })
+    console.log(data_03);
+    //　CSVの内容を表示
+    let tbody_html = "";
+    for (item of data_03) {
+        tbody_html += `<tr>
+      <td>${item.id}</td>
+      <td>${item.資産番号}</td>
+      <td>${item.所属}</td>
+      <td>${item.資産名}</td>
+      <td>${item.場所}</td>
+      <td>${item.担当}</td>
+      <td>${item.管理者}</td>
+      <td>${item.形式}</td>
+      <td>${item.個数}</td>
+      <td>${item.識別番号}</td>
+      <td>${item.取得日時}</td>
+      <td>${item.編集日時}</td>
+    </tr>
+    `
+    }
+    tbody.innerHTML = tbody_html;
+    console.log(tbody_html);
+    message.innerHTML = "部屋" + str + "には" + data_03.length + "件の資産があります。"
+};
+
+function kind_search() {
+    const str = document.getElementById("kind").value;
+
+    let tbody = document.querySelector('#csv_data_table tbody');
+    tbody.innerHTML = "";
+
+    var data_03 = data.filter(function (data) {
+        return data.所属 == str;
+    })
+    console.log(data_03);
+    //　CSVの内容を表示
+    let tbody_html = "";
+    for (item of data_03) {
+        tbody_html += `<tr>
+      <td>${item.id}</td>
+      <td>${item.資産番号}</td>
+      <td>${item.所属}</td>
+      <td>${item.資産名}</td>
+      <td>${item.場所}</td>
+      <td>${item.担当}</td>
+      <td>${item.管理者}</td>
+      <td>${item.形式}</td>
+      <td>${item.個数}</td>
+      <td>${item.識別番号}</td>
+      <td>${item.取得日時}</td>
+      <td>${item.編集日時}</td>
+    </tr>
+    `
+    }
+    tbody.innerHTML = tbody_html;
+    console.log(tbody_html);
+    message.innerHTML = "学科" + str + "が所有している資産は" + data_03.length + "件です"
+};
+
+function user_search() {
+    const str = document.getElementById("user").value;
+
+    let tbody = document.querySelector('#csv_data_table tbody');
+    tbody.innerHTML = "";
+
+    var data_03 = data.filter(function (data) {
+        return data.担当 == str;
+    })
+    console.log(data_03);
+    //　CSVの内容を表示
+    let tbody_html = "";
+    for (item of data_03) {
+        tbody_html += `<tr>
+      <td>${item.id}</td>
+      <td>${item.資産番号}</td>
+      <td>${item.所属}</td>
+      <td>${item.資産名}</td>
+      <td>${item.場所}</td>
+      <td>${item.担当}</td>
+      <td>${item.管理者}</td>
+      <td>${item.形式}</td>
+      <td>${item.個数}</td>
+      <td>${item.識別番号}</td>
+      <td>${item.取得日時}</td>
+      <td>${item.編集日時}</td>
+    </tr>
+    `
+    }
+    tbody.innerHTML = tbody_html;
+    console.log(tbody_html);
+    message.innerHTML = "ユーザー" + str + "は" + data_03.length + "件の資産を担当しています"
+};
+
+function admin_search() {
+    const str = document.getElementById("admin1").value;
+
+    let tbody = document.querySelector('#csv_data_table tbody');
+    tbody.innerHTML = "";
+
+    var data_03 = data.filter(function (data) {
+        return data.管理者 == str;
+    })
+    console.log(data_03);
+    //　CSVの内容を表示
+    let tbody_html = "";
+    for (item of data_03) {
+        tbody_html += `<tr>
+      <td>${item.id}</td>
+      <td>${item.資産番号}</td>
+      <td>${item.所属}</td>
+      <td>${item.資産名}</td>
+      <td>${item.場所}</td>
+      <td>${item.担当}</td>
+      <td>${item.管理者}</td>
+      <td>${item.形式}</td>
+      <td>${item.個数}</td>
+      <td>${item.識別番号}</td>
+      <td>${item.取得日時}</td>
+      <td>${item.編集日時}</td>
+    </tr>
+    `
+    }
+    tbody.innerHTML = tbody_html;
+    console.log(tbody_html);
+    message.innerHTML = "管理者" + str + "は" + data_03.length + "件の資産を持っています。"
+};
+
+//ダミーデータ
+
 /*[
 
     {
@@ -1545,175 +1761,3 @@ var data = [
         "編集日時": "2022/07/13"
     }
 ]*/
-
-
-//更新
-function refresh() {
-
-    console.log(data);
-    let tbody = document.querySelector('#csv_data_table tbody');
-    tbody.innerHTML = "";
-
-    //　CSVの内容を表示
-    let tbody_html = "";
-    for (item of data) {
-        tbody_html += `<tr>
-      <td>${item.id}</td>
-      <td>${item.資産番号}</td>
-      <td>${item.所属}</td>
-      <td>${item.資産名}</td>
-      <td>${item.場所}</td>
-      <td>${item.担当}</td>
-      <td>${item.管理者}</td>
-      <td>${item.形式}</td>
-      <td>${item.個数}</td>
-      <td>${item.識別番号}</td>
-      <td>${item.取得日時}</td>
-      <td>${item.編集日時}</td>
-    </tr>
-    `
-    }
-    tbody.innerHTML = tbody_html;
-    console.log(tbody_html);
-    message.innerHTML = data.length + "件のデータがあります。"
-};
-
-function Utt() {
-    console.log(data);
-};
-//検索
-function location_search() {
-    const str = document.getElementById("location1").value;
-
-    let tbody = document.querySelector('#csv_data_table tbody');
-    tbody.innerHTML = "";
-
-    var data_03 = data.filter(function (data) {
-        return data.場所 == str;
-    })
-    console.log(data_03);
-    //　CSVの内容を表示
-    let tbody_html = "";
-    for (item of data_03) {
-        tbody_html += `<tr>
-      <td>${item.id}</td>
-      <td>${item.資産番号}</td>
-      <td>${item.所属}</td>
-      <td>${item.資産名}</td>
-      <td>${item.場所}</td>
-      <td>${item.担当}</td>
-      <td>${item.管理者}</td>
-      <td>${item.形式}</td>
-      <td>${item.個数}</td>
-      <td>${item.識別番号}</td>
-      <td>${item.取得日時}</td>
-      <td>${item.編集日時}</td>
-    </tr>
-    `
-    }
-    tbody.innerHTML = tbody_html;
-    console.log(tbody_html);
-    message.innerHTML = "部屋" + str + "には" + data_03.length + "件の資産があります。"
-};
-
-function kind_search() {
-    const str = document.getElementById("kind").value;
-
-    let tbody = document.querySelector('#csv_data_table tbody');
-    tbody.innerHTML = "";
-
-    var data_03 = data.filter(function (data) {
-        return data.所属 == str;
-    })
-    console.log(data_03);
-    //　CSVの内容を表示
-    let tbody_html = "";
-    for (item of data_03) {
-        tbody_html += `<tr>
-      <td>${item.id}</td>
-      <td>${item.資産番号}</td>
-      <td>${item.所属}</td>
-      <td>${item.資産名}</td>
-      <td>${item.場所}</td>
-      <td>${item.担当}</td>
-      <td>${item.管理者}</td>
-      <td>${item.形式}</td>
-      <td>${item.個数}</td>
-      <td>${item.識別番号}</td>
-      <td>${item.取得日時}</td>
-      <td>${item.編集日時}</td>
-    </tr>
-    `
-    }
-    tbody.innerHTML = tbody_html;
-    console.log(tbody_html);
-    message.innerHTML = "学科" + str + "が所有している資産は" + data_03.length + "件です"
-};
-
-function user_search() {
-    const str = document.getElementById("user").value;
-
-    let tbody = document.querySelector('#csv_data_table tbody');
-    tbody.innerHTML = "";
-
-    var data_03 = data.filter(function (data) {
-        return data.担当 == str;
-    })
-    console.log(data_03);
-    //　CSVの内容を表示
-    let tbody_html = "";
-    for (item of data_03) {
-        tbody_html += `<tr>
-      <td>${item.id}</td>
-      <td>${item.資産番号}</td>
-      <td>${item.所属}</td>
-      <td>${item.資産名}</td>
-      <td>${item.場所}</td>
-      <td>${item.担当}</td>
-      <td>${item.管理者}</td>
-      <td>${item.形式}</td>
-      <td>${item.個数}</td>
-      <td>${item.識別番号}</td>
-      <td>${item.取得日時}</td>
-      <td>${item.編集日時}</td>
-    </tr>
-    `
-    }
-    tbody.innerHTML = tbody_html;
-    console.log(tbody_html);
-    message.innerHTML = "ユーザー" + str + "は" + data_03.length + "件の資産を担当しています"
-};
-
-function admin_search() {
-    const str = document.getElementById("admin1").value;
-
-    let tbody = document.querySelector('#csv_data_table tbody');
-    tbody.innerHTML = "";
-
-    var data_03 = data.filter(function (data) {
-        return data.管理者 == str;
-    })
-    console.log(data_03);
-    //　CSVの内容を表示
-    let tbody_html = "";
-    for (item of data_03) {
-        tbody_html += `<tr>
-      <td>${item.id}</td>
-      <td>${item.資産番号}</td>
-      <td>${item.所属}</td>
-      <td>${item.資産名}</td>
-      <td>${item.場所}</td>
-      <td>${item.担当}</td>
-      <td>${item.管理者}</td>
-      <td>${item.形式}</td>
-      <td>${item.個数}</td>
-      <td>${item.識別番号}</td>
-      <td>${item.取得日時}</td>
-      <td>${item.編集日時}</td>
-    </tr>
-    `
-    }
-    tbody.innerHTML = tbody_html;
-    console.log(tbody_html);
-    message.innerHTML = "管理者" + str + "は" + data_03.length + "件の資産を持っています。"
-};

@@ -1,4 +1,6 @@
+//
 //登録機能
+//
 
 var str1,str2,str3,str4,str5,str6,str7,str8;
 function submit_input() {

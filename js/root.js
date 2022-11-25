@@ -7,7 +7,7 @@ message.innerHTML = "データを取得してください";
 //
 //SQL関連
 //
-
+function connect_SQL(){
  // requireの設定
  const mysql = require('mysql');
 
@@ -40,7 +40,8 @@ message.innerHTML = "データを取得してください";
  
  // 接続終了
  connection.end();
- 
+};
+
 var data = [
     {
         "id": "1",
@@ -219,6 +220,7 @@ function Utt() {
     console.log(data);
 };
 
+
 //絞り込み検索
 function location_search() {
     const str = document.getElementById("location1").value;
@@ -356,6 +358,15 @@ function admin_search() {
     message.innerHTML = "管理者" + str + "は" + data_03.length + "件の資産を持っています。"
 };
 
+$(document).ready(function () {
+    $('.select').select2({
+      width: '350px',
+      placeholder: '　',
+      allowClear: true,
+      language: 'ja',
+      tags: true
+    });
+  });
 //ダミーデータ
 
 /*[

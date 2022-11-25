@@ -71,11 +71,3 @@ fileReader.onerror = () => {
 }
 
 
-$(document).ready(function () {
-  $('.select').select2({
-    width: '200px',
-    placeholder: '　',
-    language: 'ja',
-    tags: true
-  });
-});

@@ -5,7 +5,10 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/home_follower.css">
   
+
+    <script type="text/javascript" src="js/root.js"></script>
     <script type="text/javascript" src="js/login_function.js"></script>
+
     <title>login</title>
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
 <style>
@@ -54,26 +57,6 @@
   <input id="login_button" type="button" value="Login" onclick="login_data()" />
 </div>
 
-<!--
-<div class="cssload-dots">
-	<div class="cssload-dot"></div>
-	<div class="cssload-dot"></div>
-	<div class="cssload-dot"></div>
-	<div class="cssload-dot"></div>
-	<div class="cssload-dot"></div>
-</div>
-
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-	<defs>
-		<filter id="goo">
-			<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12" ></feGaussianBlur>
-			<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0	0 1 0 0 0	0 0 1 0 0	0 0 0 18 -7" result="goo" ></feColorMatrix>
-			<feBlend in2="goo" in="SourceGraphic" result="mix" ></feBlend>
-		</filter>
-	</defs>
-</svg>
--->
-
 <br><br><br>
 <h2>links</h2>
 <p><nobr><a href="https://github.com/public-order-morals/">Github,</a></nobr></p>
@@ -85,40 +68,6 @@
 
 <br><br><br>
 
-<script type="text/javascript">
- // requireの設定
-const mysql = require('mysql');
-
-// MySQLとのコネクションの作成
-const connection = mysql.createConnection({
-	host : 'localhost',
-	user : 'root',
-	database: 'data'
-});
-
-// 接続
-connection.connect();
-
-// userdataの取得
-connection.query('SELECT * from userdata;', function (err, rows, fields) {
-	if (err) { console.log('err: ' + err); } 
-
-	console.log('name: ' + rows[0].name);
-	console.log('id: ' + rows[0].id);
-
-});
-
-// userdataのカラムを取得
-connection.query('SHOW COLUMNS FROM userdata;', function (err, rows, fields) {
-	if (err) { console.log('err: ' + err); }
-
-	console.log(rows[0].Field);
-	console.log(rows[1].Field);
-});
-
-// 接続終了
-connection.end();
-</script>
 
 
 

@@ -7,28 +7,6 @@
 //
 //SQL関連
 //
-function connect_SQL(){
- const mysql = require('mysql');
- // MySQLとのコネクションの作成
- const connection = mysql.createConnection({
-     host : 'localhost',
-     user : 'root',
-     database: 'data'
- });
- // 接続
- connection.connect();
-
- //main data
-connection.query('SELECT * from a_2;', function (err, rows, fields) {
-    if (err) { console.log('err: ' + err); }
-
-    console.log(rows[0].Field);
-    console.log(rows[1].Field);
-});
-
- // 接続終了
- connection.end();
-};
 
 
 

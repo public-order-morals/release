@@ -1,0 +1,32 @@
+div.user_class {
+  border: 2px solid black;
+  width: 15%;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-bottom: 1%;
+  /* margin: 0 auto; */
+}
+
+div.cs {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid red;
+}
+
+div.me {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid yellow;
+}
+
+div.ee {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid blue;
+}
+
+div.ad{
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid green;
+}

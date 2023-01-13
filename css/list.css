@@ -1,0 +1,84 @@
+.title1 {
+	color: #043454;
+	font-family: "mei", sans-serif;
+	font-size: 40px;
+	top:10px;
+    position: relative;
+	margin-left: 35%;
+	border-left:5px solid #043454;
+	border-right:480px solid #043454;
+	padding:2px 40px;
+}
+
+.tex0{
+    position: relative;
+	top:90px;
+	left: 25%;
+	color: #fcfcfc; 
+	border-left:5px solid #fcfcfc;
+	padding:2px 10px;
+		
+  }
+  .tex1{
+    position: relative;
+	top: 25px;
+	left: 25%;
+	color: #fcfcfc; 
+	border-left:5px solid #fcfcfc;
+	padding:2px 10px;
+		
+  }
+  .tex2{
+    position: relative;
+	top: 25px;
+	left: 25%;
+	color: #fcfcfc; 
+	border-left:5px solid #fcfcfc;
+	padding:2px 10px;
+		
+  }
+  .tex3{
+    position: relative;
+	top: 25px;
+	left: 25%;
+	color: #fcfcfc; 
+	border-left:5px solid #fcfcfc;
+	padding:2px 10px;
+		
+  }
+  #search_ {
+	height: 50px;
+	padding: 0 20px;
+	position: relative;
+	left: 45%;
+	top: 40px;
+	border-radius: 40px;
+	outline: 0;
+	background: #fcfcfc;
+}
+#get_ {
+	height: 50px;
+	display: inline; /*改行しない*/
+	padding: 0 60px;
+	position: relative;
+	top: 0px;
+	left: 2px;
+	border-radius: 10px;
+	outline: 0;
+	color: #fcfcfc;
+	background: #043454;
+}
+
+/* 横並び */
+
+.image1 {
+	position: absolute;
+	top: 72px;
+	left: 79%;
+	width: 50px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: relative;
+  }
+ 

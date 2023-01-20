@@ -7,7 +7,25 @@
 //
 //SQL関連
 //
+const mysql = require('mysql');
+// MySQLとのコネクションの作成
+const connection = mysql.createConnection({
+    host : 'localhost',
+    user : 'root',
+    password : 'root',
+    database: 'data'
+});
+// 接続
+connection.connect();
 
+//main data
+connection.query(
+     'SELECT * FROM a_2',
+     (error, results) => {
+       console.log(error);
+       console.log(results);
+     }
+   );
 
 
 function refresh() {
